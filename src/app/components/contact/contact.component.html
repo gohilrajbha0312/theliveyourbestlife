@@ -1,0 +1,51 @@
+<section class="contact-section py-5" id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="contact-info">
+          <div class="info-item mb-4" *ngFor="let info of contactInfo">
+            <div class="info-icon">
+              <i class="fa {{ info.icon }}"></i>
+            </div>
+            <div class="info-content">
+              <h3>{{ info.title }}</h3>
+              <p>{{ info.content }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="contact-form">
+          <form (ngSubmit)="onSubmit()">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" [(ngModel)]="formData.name" name="name" placeholder="Your Name" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="email" class="form-control" [(ngModel)]="formData.email" name="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <input type="text" class="form-control" [(ngModel)]="formData.subject" name="subject" placeholder="Subject" required>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <textarea class="form-control" [(ngModel)]="formData.message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

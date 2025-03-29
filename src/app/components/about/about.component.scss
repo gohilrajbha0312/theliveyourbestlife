@@ -1,0 +1,60 @@
+.about-section {
+  background-color: white;
+  padding: 5rem 0;
+
+  .about-content {
+    .lead {
+      color: #6c757d;
+      font-size: 1.25rem;
+    }
+
+    p {
+      color: #6c757d;
+    }
+  }
+
+  .stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--secondary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      color: #6c757d;
+      margin-bottom: 0;
+    }
+  }
+
+  .about-image {
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      bottom: -20px;
+      left: -20px;
+      background-color: var(--secondary-color);
+      opacity: 0.1;
+      z-index: -1;
+      border-radius: 20px;
+    }
+
+    img {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
