@@ -100,11 +100,60 @@
             ],
             "scripts": []
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "livedoc-medical:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "livedoc-medical:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false
+          }
+        },
+        "ct": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "livedoc-medical:serve",
+            "watch": true,
+            "headless": false,
+            "testingType": "component"
+          },
+          "configurations": {
+            "development": {
+              "devServerTarget": "livedoc-medical:serve:development"
+            }
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "livedoc-medical:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "livedoc-medical:serve:production"
+            }
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "44c0a0f5-06a5-4187-a899-26eb9a075cf7"
+    "analytics": "44c0a0f5-06a5-4187-a899-26eb9a075cf7",
+    "schematicCollections": [
+      "@cypress/schematic",
+      "@schematics/angular"
+    ]
   }
 }
