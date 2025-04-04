@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "livedoc-medical": {
+    "theliveyourlife": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/livedoc-medical",
+            "outputPath": "dist/theliveyourlife",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "livedoc-medical:build:production"
+              "buildTarget": "theliveyourlife:build:production"
             },
             "development": {
-              "buildTarget": "livedoc-medical:build:development"
+              "buildTarget": "theliveyourlife:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -104,11 +104,11 @@
         "cypress-run": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "livedoc-medical:serve"
+            "devServerTarget": "theliveyourlife:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "livedoc-medical:serve:production"
+              "devServerTarget": "theliveyourlife:serve:production"
             }
           }
         },
@@ -122,27 +122,27 @@
         "ct": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "livedoc-medical:serve",
+            "devServerTarget": "theliveyourlife:serve",
             "watch": true,
             "headless": false,
             "testingType": "component"
           },
           "configurations": {
             "development": {
-              "devServerTarget": "livedoc-medical:serve:development"
+              "devServerTarget": "theliveyourlife:serve:development"
             }
           }
         },
         "e2e": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "livedoc-medical:serve",
+            "devServerTarget": "theliveyourlife:serve",
             "watch": true,
             "headless": false
           },
           "configurations": {
             "production": {
-              "devServerTarget": "livedoc-medical:serve:production"
+              "devServerTarget": "theliveyourlife:serve:production"
             }
           }
         }
