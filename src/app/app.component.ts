@@ -21,5 +21,5 @@ import { ContactComponent } from './components/contact/contact.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Livedoc Medical';
+  title = 'livedoc-medical';
 }
