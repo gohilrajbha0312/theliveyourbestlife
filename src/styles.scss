@@ -1,17 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'bootstrap/dist/css/bootstrap.min.css';
-@import 'font-awesome/css/font-awesome.min.css';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
 
-/* Custom styles */
+/* Healthcare Theme Colors */
 :root {
-  --primary-color: #2c3e50;
-  --secondary-color: #3498db;
-  --accent-color: #e74c3c;
+  --primary-color: #00796b; /* Teal - healthcare primary */
+  --secondary-color: #43a047; /* Green - accent */
+  --accent-color: #0288d1; /* Blue - highlight */
+  --background-color: #f4fafd; /* Light background */
+  --text-color: #222f3e; /* Dark text */
+  --card-bg: #ffffff; /* Card background */
+  --border-radius: 12px;
+  --box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.7;
+  margin: 0;
+  min-height: 100vh;
 }
 
 .section-title {
@@ -19,15 +28,40 @@ body {
   margin-bottom: 3rem;
   position: relative;
   padding-bottom: 1rem;
-  
+  color: var(--primary-color);
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 2.2rem;
   &::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 50px;
-    height: 3px;
-    background-color: var(--secondary-color);
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
   }
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  border: none;
+  border-radius: var(--border-radius);
+  color: #fff;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--accent-color);
 }
